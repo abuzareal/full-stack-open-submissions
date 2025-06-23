@@ -1,4 +1,4 @@
-const Persons = ({ filteredPersons }) => {
+const Persons = ({ filteredPersons, handleDelete }) => {
   return (
     <div>
       {filteredPersons.map((person, index) => (
@@ -6,6 +6,7 @@ const Persons = ({ filteredPersons }) => {
           <span>
             {person.name} {person.number}
           </span>
+          <button onClick={() => handleDelete(person.id)}>Delete</button>
         </div>
       ))}
     </div>
