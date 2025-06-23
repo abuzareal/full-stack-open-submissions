@@ -1,13 +1,14 @@
-const Filter = ({ handleFilter }) => {
-  return (
-    <>
-      <label htmlFor="filter">
-        <h2>filter shown with</h2>
-      </label>
-      <br />
-      <input type="text" onChange={handleFilter} />
-    </>
-  );
-};
+const Filter = ({ search, onChange }) => (
+  <>
+    <label htmlFor='search'>Search Contacts: </label>
+    <input
+      id='search'
+      name='search'
+      onChange={onChange}
+      type='text'
+      value={search}
+    />
+  </>
+)
 
-export default Filter;
+export default Filter
